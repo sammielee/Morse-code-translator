@@ -55,7 +55,9 @@ char readio()
 
 void convertor()
 {
-  static String letters[] = {".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--", "-.", "---", ".--.", "--.-",
+  static String letters[] = {"-----", ".----", "..---", "...--", "....-", ".....", "-....", "--...", "---..", "----.", //numbers
+                            "---...", "-.-.-.", "--..--", "-...-", "..--..", "-.----", "---..-",   //symbols
+                            ".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", //alphabet
                              ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--..", "E"
                             };
   int i = 0;
@@ -81,7 +83,7 @@ void convertor()
     {
       if (letters[i] == code)
       {
-        lcd.print(char('A' + i));
+        lcd.print(char('0' + i));
         cursorCol++;
         break;
       }
@@ -90,8 +92,9 @@ void convertor()
     if (letters[i] == "E")
     {
       lcd.println("<ERROR>");  //if input code doesn't match any letter, error
-      cursorCol++;
+      cursorCol += 7;
     }
+ 
   }
   code = "";                            //reset code to blank string
 }
