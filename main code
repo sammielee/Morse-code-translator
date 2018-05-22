@@ -2,7 +2,7 @@
 unsigned long signal_len,t1,t2;   //time for which button is pressed
 int inputPin = 2;                 //input pin for push button
 int ledPin = 4;                   //output pin for LED
-String code = "";                 
+String code = "";                 //string in which one alphabet is stored
 int cursorCol = 0;                //cursor for lcd columns
 int cursorRow = 0;                //cursor for lcd rows
 LiquidCrystal lcd(7, 8, 9, 10, 11, 12); 
@@ -17,7 +17,7 @@ void setup() {
 void loop()
 {
   lcd.setCursor(cursorCol, cursorRow);        //set cursor to column 0 line 1
-  //lcd.print(millis() / 1000);               //print # of sec since rest
+  
 NextDotDash:
   while (digitalRead(inputPin) == HIGH) {}
   t1 = millis();                            //time at button press
@@ -28,7 +28,7 @@ NextDotDash:
   signal_len = t2 - t1;                     //time for which button is pressed
   if (signal_len > 50)                      //to account for switch debouncing
   {
-    code += readio();                       //function to read dot or dash
+    code += decipherSignal();                       //function to read dot or dash
   }
   
   while ((millis() - t2) < 500)           //if time between button press greater than 0.5sec, skip loop and go to next alphabet
@@ -41,7 +41,7 @@ NextDotDash:
   convertor();                          //function to decipher code into alphabet
 }
 
-char readio()
+char decipherSignal()
 {
   if (signal_len < 600 && signal_len > 50)
   {
