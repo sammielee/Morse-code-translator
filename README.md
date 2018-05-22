@@ -11,3 +11,47 @@ Wire one side of the button to Arduino pin 2 and the other to the blue line. Wir
 
 Upload the C++ code under "main code" and run in Arduino. 
 
+Morse Code Alphabet:
+A •ㅡ 
+B ㅡ••• 
+C ㅡ•ㅡ• 
+D ㅡ••
+E •
+F ••ㅡ•
+G ㅡㅡ•
+H ••••
+I ••
+J •ㅡㅡㅡ
+K ㅡ•ㅡ
+L •ㅡ••
+M ㅡㅡ
+N ㅡ•
+O ㅡㅡㅡ
+P •ㅡㅡ•
+Q ㅡㅡ•ㅡ
+R •ㅡ•
+S •••
+T ㅡ
+U ••ㅡ
+V •••ㅡ
+W •ㅡㅡ
+X ㅡ••ㅡ
+Y ㅡ•ㅡㅡ
+Z ㅡㅡ••
+0 ㅡㅡㅡㅡㅡ
+1 •ㅡㅡㅡㅡ
+2 ••ㅡㅡㅡ
+3 •••ㅡㅡ
+4 ••••ㅡ
+5 •••••
+6 ㅡ••••
+7 ㅡㅡ•••
+8 ㅡㅡㅡ••
+9 ㅡㅡㅡㅡ•
+: ㅡㅡㅡ•••
+; ㅡ•ㅡ•ㅡ•
+= ㅡ•••ㅡ
+? ••ㅡㅡ••
+@ •ㅡㅡ•ㅡ•
+
+
