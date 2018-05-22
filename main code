@@ -2,7 +2,7 @@
 unsigned long signal_len,t1,t2;   //time for which button is pressed
 int inputPin = 2;                 //input pin for push button
 int ledPin = 4;                   //output pin for LED
-String code = "";                 //string in which one alphabet is stored
+String code = "";                 
 int cursorCol = 0;                //cursor for lcd columns
 int cursorRow = 0;                //cursor for lcd rows
 LiquidCrystal lcd(7, 8, 9, 10, 11, 12); 
@@ -56,7 +56,7 @@ char readio()
 void convertor()
 {
   static String letters[] = {"-----", ".----", "..---", "...--", "....-", ".....", "-....", "--...", "---..", "----.", //numbers
-                            "---...", "-.-.-.", "(ignore)--..--", "-...-", "(ignore)..--..", "-.----", "---..-",   //symbols
+                            "---...", "-.-.-.", "--..--", "-...-", "..--..", "-.----", "---..-",   //symbols
                             ".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", //alphabet
                              ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--..", "E"
                             };
